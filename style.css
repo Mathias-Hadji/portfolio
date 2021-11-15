@@ -1,6 +1,170 @@
+/* ------------ Reset CSS ------------ */
+
 *, ::before, ::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    background: rgb(83, 83, 83);
+    position: relative;
+    height: 100vh;
+}
+
+
+/* ------------ Section Navigation ------------ */
+
+.menu-desktop {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.192);
+}
+
+.nav-logo a {
+    text-decoration: none;
+    display: flex;
+}
+
+.nav-logo p:nth-child(1) {
+    margin-right: 10px;
+}
+
+.nav-logo p::first-letter {
+    color: #A32B3E;
+}
+
+.nav-logo p {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-items {
+    display: flex;
+}
+
+.nav-items a {
+    text-decoration: none;
+}
+
+.nav-items a li {
+    font-size: 14px;
+}
+
+.nav-items a li:hover {
+    transition: all 0.1s ease-in-out;
+    color: #A32B3E;
+}
+
+.nav-item {
+    list-style-type: none;
+    padding: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.menu-hamburger {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+    display: none;
+}
+
+.icon-menu-hamburger {
+    width: 25px;
+    filter: invert(100%) sepia(6%) saturate(7498%) hue-rotate(235deg) brightness(115%) contrast(91%);
+}
+
+.menu-small-screen {
+    display: none;
+}
+
+.menu-small-screen a {
+    display: none;
+}
+
+.menu-small-screen a:hover {
+    color: #A32B3E;
+}
+
+
+
+/* ------------ Responsive Section Navigation ------------ */
+
+@media screen and (max-width: 768px) {
+
+    .menu-desktop {
+        justify-content: space-between;
+        padding: 0 20px;
+        background: transparent;
+    }
+    
+    .nav-items {
+        display: none;
+    }
+    
+    .menu-hamburger {
+        display: flex;
+    }
+
+    .menu-small-screen {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 800px;
+        background: #1F1E1F;
+        transition: left 0.5s ease-in-out;
+        color: #fff;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .menu-small-screen a {
+        text-decoration: none;
+        list-style-type: none;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        margin: 15px;
+        display: block;
+        font-size: 20px;
+    }
+
+    .display-menu-small-screen {
+        left: 0;
+    }
+
+    .txt-menu-hover {
+        position: absolute;
+        color:#232123;
+        font-size: 70px;
+        font-weight: bold;
+        z-index: -1;
+        text-align: center;
+        width: 100%;
+        letter-spacing: 30px;
+        transition: all 150ms ease-in-out;
+        opacity: 0;
+    }
+
+    .menu-small-screen a:hover ~ .txt-menu-hover {
+        letter-spacing: 0px;
+        opacity: 1;
+    }
+}
