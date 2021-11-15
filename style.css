@@ -168,3 +168,15 @@ body {
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 425px) {
+    .txt-menu-hover {
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .txt-menu-hover {
+        font-size: 50px;
+    }
+}
