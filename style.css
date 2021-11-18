@@ -332,3 +332,158 @@ body {
         justify-content: center;
     }
 }
+
+
+
+/* ------------ Section Projects ------------ */
+
+.project-section {
+    padding: 50px 0;
+}
+
+.title-section {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-size: 40px;
+    font-weight: 400;
+    padding: 0 20px;
+}
+
+.title-section::first-letter { 
+    color: #A32B3E; 
+}
+
+.container-card-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-project {
+    width: 600px;
+    height: 500px;
+    background: #404142;
+    margin: 15px;
+    padding: 20px;
+    background-image: url('./ressources/laptop-retouche.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-project-content {
+    margin: 10px;
+}
+
+.card-project-content h3 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.techno-project {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 0 20px;
+    border-radius: 15px;
+    font-size: 12px;
+    cursor: default;
+}
+
+.techno-project:hover {
+    transition: all 0.1s ease-in-out;
+    background: rgba(0, 0, 0, 0.151);
+}
+
+.description-project {
+    margin-top: 5px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.container-btn-project {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn-project {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    width: 130px;
+    border-radius: 1px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-project:nth-child(1) {
+    margin-right: 20px;
+}
+
+.btn-project:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-preview-project {
+    background: #7769D9;
+}
+
+.btn-preview-project p {
+    color: #fff;
+}
+
+.btn-preview-project img {
+    width: 10px;
+    margin-right: 10px;
+    filter: invert(99%) sepia(2%) saturate(7368%) hue-rotate(189deg) brightness(112%) contrast(100%);
+}
+
+.btn-code-source-project {
+    background: #fff;
+}
+
+.btn-code-source-project img {
+    width: 15px;
+    margin-right: 10px;
+}
+
+
+
+/* ------------ Responsive Section Projects ------------ */
+
+
+@media screen and (max-width: 768px) {
+
+    .project-section {
+        padding: 20px 0;
+    }
+
+    .title-section {
+        font-size: 35px;
+    }
+    
+    .container-card-projects {
+        flex-direction: column;
+    }
+
+    .card-project {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .title-section {
+        font-size: 30px;
+    }
+
+}
