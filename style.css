@@ -87,6 +87,8 @@ body {
 
 .menu-small-screen {
     display: none;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .menu-small-screen a {
