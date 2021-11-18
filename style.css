@@ -20,8 +20,18 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: rgba(0, 0, 0, 0.192);
+    background: #29323f2d;
     position: fixed;
+}
+
+.menu-desktop-bg-lighter {
+    background: #29323f2d;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-desktop-bg-darker {
+    background: #29323F;
+    transition: all 0.5s ease-in-out;
 }
 
 .nav-logo a {

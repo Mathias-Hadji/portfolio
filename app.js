@@ -33,3 +33,22 @@ liMenuSmallScreen.forEach(link => {
     });
 });
 
+
+
+// Animation navbar bg darker on scroll
+const menuDesktop = document.querySelector('.menu-desktop');
+
+window.addEventListener('scroll', () => {
+
+    if(window.scrollY >= 150 && !menuDesktop.classList.contains('menu-desktop-bg-darker')){
+
+        menuDesktop.classList.remove('menu-desktop-bg-lighter');
+        menuDesktop.classList.add('menu-desktop-bg-darker');
+
+    } else if(window.scrollY <= 150 && !menuDesktop.classList.contains('menu-desktop-bg-lighter')){
+        
+        menuDesktop.classList.remove('menu-desktop-bg-darker');
+        menuDesktop.classList.add('menu-desktop-bg-lighter');
+    }
+});
+
