@@ -22,6 +22,7 @@ body {
     align-items: center;
     background: #29323f2d;
     position: fixed;
+    z-index: 9999;
 }
 
 .menu-desktop-bg-lighter {
