@@ -354,12 +354,15 @@ body {
 }
 
 .title-section {
-    text-align: center;
     text-transform: uppercase;
-    margin: 20px 0;
     font-size: 40px;
     font-weight: 400;
+}
+
+.title-project {
+    text-align: center;
     padding: 0 20px;
+    margin: 20px 0;
 }
 
 .title-section::first-letter { 
@@ -376,7 +379,7 @@ body {
     width: 600px;
     height: 500px;
     background: #404142;
-    margin: 15px;
+    margin: 40px;
     padding: 20px;
     background-image: url('./ressources/laptop-retouche.jpg');
     background-position: center;
@@ -488,7 +491,7 @@ body {
     }
 
     .card-project {
-        width: 95%;
+        width: 80%;
     }
 }
 
@@ -498,4 +501,107 @@ body {
         font-size: 30px;
     }
 
+    .card-project {
+        width: 95%;
+    }
+
+}
+
+
+
+
+/* ------------ Section About ------------ */
+
+.about-section {
+    background: #292E37;
+    display: flex;
+    justify-content: center;
+}
+
+.container-txt-about {
+    width: 700px;
+    padding: 75px 40px;
+}
+
+.title-about {
+    color: #fff;
+}
+
+.container-txt-about video {
+    display: none;
+}
+
+.container-txt-about p {
+    color: #fff;
+    margin: 20px 0;
+}
+
+.container-txt-about a {
+    text-decoration: none;
+    color: #fff;
+    background: #6A65D1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    border-radius: 2px;
+}
+
+.container-txt-about a:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.container-video-about {
+    width: 600px;
+    padding: 75px 20px;
+}
+
+.container-video-about video {
+    width: 100%;
+}
+
+
+/* ------------ Responsive Section About ------------ */
+
+
+
+@media screen and (max-width: 768px) {
+
+    .about-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-txt-about {
+        width: 100%;
+        padding: 75px 75px;
+    }
+
+    .title-about {
+        text-align: center;
+    }
+
+    .container-video-about {
+        display: none;
+    }
+
+    .container-txt-about video {
+        display: block;
+        width: 100%;
+        padding: 50px 0;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+
+    .container-txt-about {
+        padding: 50px 30px;
+    }
+
+    .container-txt-about video {
+        padding: 30px 0;
+    }
 }
