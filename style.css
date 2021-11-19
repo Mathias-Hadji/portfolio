@@ -606,3 +606,45 @@ body {
         padding: 30px 0;
     }
 }
+
+
+
+
+/* ------------ Section Footer ------------ */
+
+.footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 10px 20px;
+    background: #292E37;
+    border-top: 1px dotted #fff;
+}
+
+.bloc-title-section-footer {
+    display: flex;
+}
+
+.title-footer {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.title-footer::first-letter {
+    color: #A32B3E;
+}
+
+
+.expression {
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #fff;
+}
