@@ -352,6 +352,7 @@ body {
 
 .project-section {
     padding: 50px 0;
+    width: 100%;
 }
 
 .title-section {
@@ -363,7 +364,7 @@ body {
 .title-project {
     text-align: center;
     padding: 0 20px;
-    margin: 20px 0;
+    margin: 50px 0;
 }
 
 .title-section::first-letter { 
@@ -371,16 +372,15 @@ body {
 }
 
 .container-card-projects {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template: 500px 500px / auto auto;
+    gap: 50px;
+    margin: 0 100px;
 }
 
 .card-project {
-    width: 600px;
-    height: 500px;
+    grid-area: auto;
     background: #404142;
-    margin: 40px;
     padding: 20px;
     background-image: url('./ressources/laptop-retouche.jpg');
     background-position: center;
@@ -389,6 +389,11 @@ body {
     display: flex;
     align-items: flex-end;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.card-project:hover {
+    box-shadow: rgba(0, 0, 0, 0.80) 0px 5px 15px;
 }
 
 .card-project-content {
@@ -399,6 +404,7 @@ body {
     color: #fff;
     font-size: 30px;
     margin-bottom: 5px;
+    font-weight: 400;
 }
 
 .techno-project {
@@ -445,12 +451,15 @@ body {
 }
 
 .btn-project:hover {
-    transform: scale(1.1);
     transition: all 0.2s ease-in-out;
 }
 
 .btn-preview-project {
     background: #7769D9;
+}
+
+.btn-preview-project:hover {
+    background: #5d52a7;
 }
 
 .btn-preview-project p {
@@ -467,6 +476,11 @@ body {
     background: #fff;
 }
 
+.btn-code-source-project:hover {
+    background: rgb(211, 211, 211);
+
+}
+
 .btn-code-source-project img {
     width: 15px;
     margin-right: 10px;
@@ -476,39 +490,63 @@ body {
 
 /* ------------ Responsive Section Projects ------------ */
 
+@media screen and (max-width: 1024px) {
+
+    .container-card-projects {
+        margin: 0 20px;
+        gap: 20px;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
-
-    .project-section {
-        padding: 20px 0;
-    }
 
     .title-section {
         font-size: 35px;
     }
     
     .container-card-projects {
+        display: flex;
+        align-items: center;
         flex-direction: column;
+        margin: 0 50px;
+        gap: 50px;
     }
 
     .card-project {
-        width: 80%;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .container-card-projects {
+        margin: 0 20px;
+    }
+
+    .card-project {
+        padding: 10px;
+    }
+
+    .title-section {
+        font-size: 30px;
     }
 }
 
 @media screen and (max-width: 375px) {
 
-    .title-section {
-        font-size: 30px;
+    .container-card-projects {
+        margin: 0 10px;
     }
 
-    .card-project {
-        width: 95%;
+    .card-project h3 {
+        font-size: 25px;
     }
 
+    .description-project {
+        font-size: 14px;
+    }
 }
-
-
 
 
 /* ------------ Section About ------------ */
