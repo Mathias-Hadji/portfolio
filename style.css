@@ -231,7 +231,6 @@ body {
 .bloc-btn-hero-section {
     margin-top: 30px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -241,12 +240,13 @@ body {
     color: #fff;
     font-size: 15px;
     border: 2px solid #fff;
-    padding: 15px 15px;
+    padding: 15px;
     width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 20px;
+
 }
 
 
@@ -307,42 +307,47 @@ body {
     }
 
     .btn-hero-section {
-        margin-top: 10px;
-        text-decoration: none;
-        color: #fff;
-        font-size: 13px;
-        border: 2px solid #fff;
-        padding: 15px 15px;
-        width: 150px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 20px;
+        width: auto;
+        padding: 10px 10px;
     }
-
 }
 
 
 @media screen and (max-width: 425px) {
     
-    .container-txt-hero-section {
-        margin: auto 0;
-    }
-
-    .title-portfolio, .name-portfolio {
-        text-align: center;
-    }
-
     .title-portfolio {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .name-portfolio {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .title-portfolio {
         font-size: 30px;
     }
 
-    .bloc-btn-hero-section {
+    .name-portfolio {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .hero-section {
         justify-content: center;
+    }
+
+    .container-txt-hero-section {
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .btn-hero-section {
+        margin-right: 0;
     }
 }
 
