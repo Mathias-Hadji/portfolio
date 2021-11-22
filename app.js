@@ -1,20 +1,53 @@
+
+
 // Animation menu de navigation petits écrans
 
-const btnMenuHamburger = document.querySelector('.menu-hamburger');
+const menuHamburger = document.querySelector('.menu-hamburger');
+const iconMenuHamburger = document.querySelectorAll('.icon-menu-hamburger');
+
 const menuSmallScreen = document.querySelector('.menu-small-screen');
 
-btnMenuHamburger.addEventListener('click', () => {
+const linkMenuSmallScreen = document.querySelectorAll('.menu-small-screen a');
 
-    menuSmallScreen.classList.toggle('display-menu-small-screen');
+menuHamburger.addEventListener('click', () => {
 
+    iconMenuHamburger.forEach(icon => {
 
-    // Lock scrolling when menu small screen is open
-    if(menuSmallScreen.classList.contains('display-menu-small-screen')) {
-        document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-    } else {
-        document.getElementsByTagName('body')[0].style.overflow = 'visible';
-    }
+        icon.classList.toggle('active');
+        icon.classList.toggle('disabled');
+    });
+
+    menuSmallScreen.classList.toggle('menu-small-screen-active');
+    
+    // Lock scrolling when menu small screen is active
+    document.getElementsByTagName('body')[0].classList.toggle('block-scroll');
+
+    linkMenuSmallScreen.forEach(link => {
+
+        link.addEventListener('click', () => {
+
+            document.getElementsByTagName('body')[0].classList.toggle('block-scroll');
+            menuSmallScreen.classList.remove('menu-small-screen-active')
+        });
+    });
+
 });
+
+// const btnMenuHamburger = document.querySelector('.menu-hamburger');
+// const menuSmallScreen = document.querySelector('.menu-small-screen');
+
+// btnMenuHamburger.addEventListener('click', () => {
+
+//     menuSmallScreen.classList.toggle('display-menu-small-screen');
+
+
+//     // Lock scrolling when menu small screen is open
+//     if(menuSmallScreen.classList.contains('display-menu-small-screen')) {
+//         document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+//     } else {
+//         document.getElementsByTagName('body')[0].style.overflow = 'visible';
+//     }
+// });
 
 
 

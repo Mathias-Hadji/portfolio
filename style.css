@@ -12,6 +12,19 @@ body {
 
 }
 
+.active {
+    display: block;
+}
+
+.disabled {
+    display: none;
+}
+
+.block-scroll {
+    overflow: hidden;
+}
+
+
 /* ------------ Section Navigation ------------ */
 
 .menu-desktop {
@@ -22,7 +35,7 @@ body {
     align-items: center;
     background: #29323f2d;
     position: fixed;
-    z-index: 9999;
+    z-index: 9997;
 }
 
 .menu-desktop-bg-lighter {
@@ -80,27 +93,47 @@ body {
 }
 
 .menu-hamburger {
+    position: absolute;
+    right: 20px;
+    top: 15px;
     width: 50px;
     height: 50px;
     border: 2px solid #fff;
     border-radius: 50%;
+    display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    z-index: 100;
+    z-index: 9999;
+    position: fixed;
     display: none;
 }
 
 .icon-menu-hamburger {
     width: 25px;
     filter: invert(100%) sepia(6%) saturate(7498%) hue-rotate(235deg) brightness(115%) contrast(91%);
+    display: none;
 }
 
 .menu-small-screen {
-    display: none;
     height: 100vh;
     overflow: hidden;
+    z-index: 9998;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 150vw;
+    background: #1F1E1F;
+    transition: all 0.5s ease-in-out;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
 }
+
 
 .menu-small-screen a {
     display: none;
@@ -119,8 +152,10 @@ body {
     .menu-desktop {
         justify-content: space-between;
         padding: 0 20px;
-        background: transparent;
-        position: absolute;
+    }
+
+    .menu-small-screen {
+        display: flex;
     }
     
     .nav-items {
@@ -131,21 +166,8 @@ body {
         display: flex;
     }
 
-    .menu-small-screen {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 800px;
-        background: #1F1E1F;
-        transition: left 0.5s ease-in-out;
-        color: #fff;
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
+    .menu-small-screen-active {
+        left: 0;
     }
 
     .menu-small-screen a {
@@ -157,10 +179,6 @@ body {
         margin: 15px;
         display: block;
         font-size: 20px;
-    }
-
-    .display-menu-small-screen {
-        left: 0;
     }
 
     .txt-menu-hover {
