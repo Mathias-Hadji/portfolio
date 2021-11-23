@@ -8,6 +8,15 @@ const menuSmallScreen = document.querySelector('.menu-small-screen');
 // Animation du menu lorsque l'on clique sur l'icone hamburger
 menuHamburger.addEventListener('click', () => {
 
+
+    // Au clic sur l'icone du menu petit écran : 
+    // - Permutation de l'image du bouton du menu hamburger en fonction de si le menu est ouvert ou fermé
+    // - Toggle la classe qui ouvre ou ferme le menu
+    // - Toggle la classe qui bloque ou débloque le scroll
+
+
+    // // - Permutation de l'image du bouton du menu hamburger en fonction de si le menu est ouvert ou fermé
+
     iconMenuHamburger.forEach(icon => {
 
         if(icon.classList.contains('display-transition-scale-y')) {
@@ -21,28 +30,6 @@ menuHamburger.addEventListener('click', () => {
             icon.classList.remove('disappear-transition-scale-y');
         }
     });
-
-
-
-    // Au clic sur l'icone du menu petit écran : 
-    // - Permutation de l'image du bouton du menu hamburger en fonction de si le menu est ouvert ou fermé
-    // - Toggle la classe qui ouvre ou ferme le menu
-    // - Toggle la classe qui bloque ou débloque le scroll
-
-
-    // // - Permutation de l'image du bouton du menu hamburger en fonction de si le menu est ouvert ou fermé
-    // if(iconMenuHamburger.src.split('ressources')[1] === "/menu-hamburger.svg") {
-
-    //     iconMenuHamburger.src = "./ressources/minus-solid.svg"
-    //     iconMenuHamburger.classList.add('test');
-
-    // } else {
-
-    //     iconMenuHamburger.src = "./ressources/menu-hamburger.svg"
-    // }
-
-    
-
 
     // - Toggle la classe qui ouvre ou ferme le menu
     const menuSmallScreen = document.querySelector('.menu-small-screen');
