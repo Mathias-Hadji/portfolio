@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     position: relative;
@@ -36,12 +40,9 @@ body {
     background: #29323f2d;
     position: fixed;
     z-index: 9997;
-}
-
-.menu-desktop-bg-lighter {
-    background: #29323f2d;
     transition: all 0.5s ease-in-out;
 }
+
 
 .menu-desktop-bg-darker {
     background: #29323F;
@@ -112,14 +113,14 @@ body {
 .icon-menu-hamburger {
     width: 25px;
     filter: invert(100%) sepia(6%) saturate(7498%) hue-rotate(235deg) brightness(115%) contrast(91%);
-    display: none;
 }
+
 
 .menu-small-screen {
     height: 100vh;
     overflow: hidden;
     z-index: 9998;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
