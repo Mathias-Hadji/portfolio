@@ -110,11 +110,34 @@ body {
     display: none;
 }
 
+.menu-hamburger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transform: scale(1);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: 1.5s ease-in-out infinite loop-animation-scale-btn-menu-small-screen;
+}
+
+
+@keyframes loop-animation-scale-btn-menu-small-screen {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+    }
+}
+
+
 .icon-menu-hamburger {
     width: 25px;
     filter: invert(100%) sepia(6%) saturate(7498%) hue-rotate(235deg) brightness(115%) contrast(91%);
 }
-
 
 .menu-small-screen {
     height: 100vh;
@@ -143,6 +166,8 @@ body {
 .menu-small-screen a:hover {
     color: #A32B3E;
 }
+
+
 
 
 
