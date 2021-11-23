@@ -16,12 +16,12 @@ body {
 
 }
 
-.active {
-    display: block;
+.display-transition-scale-y {
+    transform: scaleY(1);
 }
 
-.disabled {
-    display: none;
+.disappear-transition-scale-y {
+    transform: scaleY(0);
 }
 
 .block-scroll {
@@ -110,7 +110,7 @@ body {
     display: none;
 }
 
-.menu-hamburger::after {
+.menu-hamburger::before {
     content: '';
     position: absolute;
     width: 50px;
@@ -133,11 +133,13 @@ body {
     }
 }
 
-
 .icon-menu-hamburger {
+    transition: all 0.3s ease-in-out;
+    position: absolute;
     width: 25px;
     filter: invert(100%) sepia(6%) saturate(7498%) hue-rotate(235deg) brightness(115%) contrast(91%);
 }
+
 
 .menu-small-screen {
     height: 100vh;

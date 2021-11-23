@@ -1,14 +1,28 @@
 // -------------------- Animation du menu de navigation --------------------
 
 const menuHamburger = document.querySelector('.menu-hamburger');
-const iconMenuHamburger = document.querySelector('.icon-menu-hamburger');
+const iconMenuHamburger = document.querySelectorAll('.icon-menu-hamburger');
 const menuSmallScreen = document.querySelector('.menu-small-screen');
-
-iconMenuHamburger.src = "./ressources/menu-hamburger.svg"
 
 
 // Animation du menu lorsque l'on clique sur l'icone hamburger
 menuHamburger.addEventListener('click', () => {
+
+    iconMenuHamburger.forEach(icon => {
+
+        if(icon.classList.contains('display-transition-scale-y')) {
+
+            icon.classList.remove('display-transition-scale-y');
+            icon.classList.add('disappear-transition-scale-y');
+
+        } else {
+            
+            icon.classList.add('display-transition-scale-y');
+            icon.classList.remove('disappear-transition-scale-y');
+        }
+    });
+
+
 
     // Au clic sur l'icone du menu petit écran : 
     // - Permutation de l'image du bouton du menu hamburger en fonction de si le menu est ouvert ou fermé
@@ -16,15 +30,18 @@ menuHamburger.addEventListener('click', () => {
     // - Toggle la classe qui bloque ou débloque le scroll
 
 
-    // - Permutation de l'image du bouton du menu hamburger en fonction de si le menu est ouvert ou fermé
-    if(iconMenuHamburger.src.split('ressources')[1] === "/menu-hamburger.svg") {
+    // // - Permutation de l'image du bouton du menu hamburger en fonction de si le menu est ouvert ou fermé
+    // if(iconMenuHamburger.src.split('ressources')[1] === "/menu-hamburger.svg") {
 
-        iconMenuHamburger.src = "./ressources/minus-solid.svg"
+    //     iconMenuHamburger.src = "./ressources/minus-solid.svg"
+    //     iconMenuHamburger.classList.add('test');
 
-    } else {
+    // } else {
 
-        iconMenuHamburger.src = "./ressources/menu-hamburger.svg"
-    }
+    //     iconMenuHamburger.src = "./ressources/menu-hamburger.svg"
+    // }
+
+    
 
 
     // - Toggle la classe qui ouvre ou ferme le menu
@@ -56,8 +73,22 @@ linkMenuSmallScreen.forEach(link => {
         // - Fermeture du menu
         menuSmallScreen.classList.remove('menu-small-screen-active');
 
+
         // - Remise en place de l'image du bouton du menu hamburger position par défaut (menu fermé).
-        iconMenuHamburger.src = "./ressources/menu-hamburger.svg"
+        iconMenuHamburger.forEach(icon => {
+
+            if(icon.classList.contains('display-transition-scale-y')) {
+    
+                icon.classList.remove('display-transition-scale-y');
+                icon.classList.add('disappear-transition-scale-y');
+    
+            } else {
+                
+                icon.classList.add('display-transition-scale-y');
+                icon.classList.remove('disappear-transition-scale-y');
+            }
+        });
+
 
         // - Débloquage du scroll 
         document.getElementsByTagName('body')[0].classList.remove('block-scroll');
